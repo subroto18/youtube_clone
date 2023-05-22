@@ -6,7 +6,7 @@ export const VideoPlayer = () => {
   const search_query = searchParams.get("v");
 
   return (
-    <div>
+    <div className="mb-10">
       <YouTube
         videoId={search_query} // defaults -> ''
         id={search_query} // defaults -> ''

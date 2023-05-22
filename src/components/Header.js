@@ -5,6 +5,7 @@ import {
   toggleSlideMenu,
   updateScreenWidth,
 } from "../utilis/appSlice";
+
 import { AutoComplete } from "./AutoComplete";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { YOUTUBE_SEARCH_API } from "../utilis/youtubeApi";
@@ -41,6 +42,10 @@ const Header = () => {
 
   const autoComplete = (state) => {
     dispatch(toggleAutoComplete(state));
+  };
+
+  const cl = () => {
+    //sdhhj sd/s
   };
 
   useEffect(() => {

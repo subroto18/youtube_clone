@@ -10,7 +10,9 @@ import {
 } from "../utilis/stringGenerator";
 
 const LiveChat = () => {
-  const chatData = useSelector((store) => store.liveChat.data);
+  const chatData = useSelector((state) => state.liveChat.data);
+
+  console.log(chatData);
   const [message, setMessage] = useState("");
   const dispatch = useDispatch();
   const name = generateNames();
@@ -51,7 +53,7 @@ const LiveChat = () => {
         <div className="">
           {chatData.map((data, index) => {
             return (
-              <div className="flex p-3">
+              <div key={index} className="flex p-3">
                 <img
                   className="h-6 rounded-full"
                   src={data.avatar}

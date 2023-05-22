@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { HOME_LOGO, SHORTS, SUBSCRIPTIONS } from "../utilis/Icons";
+import { SHORTS } from "../utilis/Icons";
 import { RxAvatar } from "react-icons/rx";
 import { AiFillHome, AiOutlineFire } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";

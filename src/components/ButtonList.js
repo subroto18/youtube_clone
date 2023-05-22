@@ -31,6 +31,7 @@ const ButtonList = () => {
       {button.map((b) => {
         return (
           <button
+            key={b}
             onClick={() => setIsAction(b)}
             className={`${
               isAction === b ? "bg-black text-white" : "bg-slate-100"

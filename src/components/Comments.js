@@ -61,13 +61,11 @@ const Comments = ({ data }) => {
 };
 
 const CommentLists = ({ data }) => {
-  console.log(data, "daya");
   return (
     <div>
       {data.length > 0 && (
         <>
           {data.map((comment, index) => {
-            console.log(comment);
             return (
               <div>
                 <Comments key={index} data={comment} />

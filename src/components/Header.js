@@ -1,15 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  toggleMenu,
-  toggleSlideMenu,
-  updateScreenWidth,
-} from "../utilis/appSlice";
+import { toggleMenu, updateScreenWidth } from "../utilis/appSlice";
 
 import { AutoComplete } from "./AutoComplete";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { YOUTUBE_SEARCH_API } from "../utilis/youtubeApi";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiFillAudio } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -29,12 +25,9 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isAutoComplete = useSelector((store) => store.app.isAutoComplete);
-  const isSlideMenuOpen = useSelector((store) => store.app.isSlideMenuOpen);
   const screenWidth = useSelector((store) => store.app.screenWidth);
-  const isVideoError = useSelector((store) => store.videos.error);
   const [queryData, setQueryData] = useState("");
   const cacheSearch = useSelector((store) => store.search.cache);
-  const location = useLocation();
 
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
@@ -44,15 +37,7 @@ const Header = () => {
     dispatch(toggleAutoComplete(state));
   };
 
-  const cl = () => {
-    //sdhhj sd/s
-  };
-
   useEffect(() => {
-    // if (!(location.pathname === "/")) {
-    //   dispatch(toggleSlideMenu(true));
-    //   dispatch(toggleMenu());
-    // }
     let width = window.innerWidth;
 
     dispatch(updateScreenWidth(width));

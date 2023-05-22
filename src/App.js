@@ -1,11 +1,8 @@
-import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Watch from "./components/Watch";
 import "./App.css";
 import { Body } from "./components/Body";
 import { MainContainer } from "./components/MainContainer";
-
-import store from "./utilis/store";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { SearchResult } from "./components/SearchResult";
 function App() {
@@ -31,11 +28,7 @@ function App() {
     },
   ]);
 
-  return (
-    <Provider store={store}>
-      <RouterProvider router={appRouter} />
-    </Provider>
-  );
+  return <RouterProvider router={appRouter} />;
 }
 
 export default App;

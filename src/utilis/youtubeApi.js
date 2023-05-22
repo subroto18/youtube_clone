@@ -1,6 +1,5 @@
 const API_KEY = "AIzaSyCl-0EM-sMKvSwbC0xxSOrXZxMqv9DQfRQ";
 export const YOUTUBE_API = (maxResults) => {
-  let totalResult = 0;
   return (
     `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&resultsPerPage=1&maxResults=${maxResults}&regionCode=IN&key=` +
     API_KEY
